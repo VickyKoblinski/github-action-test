@@ -27,6 +27,6 @@ jobs:
         with:
           result-encoding: string
           script: |
-            console.log(github.event_name);
+            console.log(github);
             if (github.event_name == 'push') return true
             return false;
