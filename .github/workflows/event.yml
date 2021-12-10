@@ -27,7 +27,6 @@ jobs:
         with:
           result-encoding: string
           script: |
-            console.log(context.ref)
-            console.log(context)
-            if (github.event_name == 'push') return true
-            return false;
+            if (context.eventName == 'push') return console.log('Im a push')
+            console.log('Im not a push!')
+
